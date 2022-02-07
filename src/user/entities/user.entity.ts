@@ -1,5 +1,7 @@
 import { BaseEntity, Column, Entity, ManyToOne, OneToMany, OrderByCondition, PrimaryColumn, PrimaryGeneratedColumn, Unique } from "typeorm";
 import * as bcrypt from "bcrypt";
+import { Address } from "cluster";
+import { Cart } from "src/cart/entities/cart.entity";
 
 @Entity('users')
 @Unique(['user_email'])
@@ -26,8 +28,8 @@ export class User extends BaseEntity {
     @OneToMany(type => Order, order => order.order_id)
     order_id: OrderByCondition;
 
-    @OneToMany(type => AddInfo, info => info.info_id)
-    info_id: Info;
+    @OneToMany(type => AddAddress, address => address.address_id)
+    address_id: Address;
 
     async checkPassword(password: string): Promise<boolean> {
         console.log(this.user_email + " Pwd");
@@ -37,22 +39,22 @@ export class User extends BaseEntity {
     }
 }
 
-@Entity('user_info')
-export class AddInfo extends BaseEntity {
+@Entity('user_address')
+export class AddAddress extends BaseEntity {
     @PrimaryGeneratedColumn()
-    info_id: number;
+    address_id: number;
 
     @Column()
-    info_phone_number: string;
+    address_phone_number: string;
 
     @Column()
-    info_bank_account: string;
+    address_bank_account: string;
 
     @Column()
-    info_depositor: string;
+    address_depositor: string;
 
     @Column({ default: true })
-    info_nationality: boolean;
+    address_nationality: boolean;
     
     @ManyToOne(type => User, user => user.user_id)
     user_id: User;

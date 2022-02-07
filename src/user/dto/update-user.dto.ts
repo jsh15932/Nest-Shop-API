@@ -6,5 +6,5 @@ export class UpdateUserDto extends PartialType(createUserDto) {
     @IsNotEmpty()
     @IsMobilePhone()
 
-    user_phone: string;
+    user_phone_number: string;
 }

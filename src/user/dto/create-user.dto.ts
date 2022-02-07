@@ -16,14 +16,17 @@ export class createUserDto {
     user_salt: string;
 }
 
-export class CreateInfoDto {
+export class CreateAddressDto {
     @IsNotEmpty()
-    phone_number: string;
+    address_phone_number: string;
 
     @IsNotEmpty()
-    bank_account: string;
+    address_bank_account: string;
 
     @IsNotEmpty()
     @MaxLength(20)
-    depositor: string;
+    address_depositor: string;
+
+    @IsNotEmpty()
+    address_nationality: string;
 }
