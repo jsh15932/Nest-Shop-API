@@ -2,6 +2,7 @@ import { BaseEntity, Column, Entity, ManyToOne, OneToMany, OrderByCondition, Pri
 import * as bcrypt from "bcrypt";
 import { Address } from "cluster";
 import { Cart } from "src/cart/entities/cart.entity";
+import { Order } from "src/order/entities/order.entity";
 
 @Entity('users')
 @Unique(['user_email'])

@@ -1,3 +1,5 @@
+import { Product } from "src/product/entities/product.entity";
+
 export interface OrderViewInterface {
     order_date: Date;
     order_total: number;

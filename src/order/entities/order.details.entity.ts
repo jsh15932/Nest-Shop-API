@@ -1,3 +1,4 @@
+import { Product } from "src/product/entities/product.entity";
 import { BaseEntity, Column, ManyToOne, PrimaryGeneratedColumn } from "typeorm";
 
 export class OrderDetails extends BaseEntity {
