@@ -25,8 +25,7 @@ export class CategoryController {
     })}))
     @ApiConsumes('multipart/form-data')
     createCategory(@Body(ValidationPipe) createCategoryDto: CreateCategoryDto,
-    @UploadedFile() file: Express.Multer.File) :Promise<Category> {
-        console.log('controller')
+    @UploadedFile() file: Express.Multer.File): Promise<Category> {
         return this.categoryService.createCategory(createCategoryDto,file);
     }
 }

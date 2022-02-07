@@ -1,4 +1,5 @@
 import { Cart } from "src/cart/entities/cart.entity";
+import { SubCategory } from "src/subcategory/entities/subcategory.entity";
 import { BaseEntity, Column, Entity, ManyToOne, OneToMany, PrimaryGeneratedColumn, Unique } from "typeorm";
 import { ProductImages } from "./productimages.entity";
 import { ProductRatingByUser } from "./productrate.entity";

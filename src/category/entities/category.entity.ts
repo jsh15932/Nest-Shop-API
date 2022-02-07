@@ -1,3 +1,4 @@
+import { SubCategory } from "src/subcategory/entities/subcategory.entity";
 import { BaseEntity, Column, Entity, OneToMany, PrimaryGeneratedColumn, Unique } from "typeorm";
 
 @Entity()
