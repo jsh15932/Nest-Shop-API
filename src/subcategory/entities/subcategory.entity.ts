@@ -3,7 +3,7 @@ import { Product } from "src/product/entities/product.entity";
 import { BaseEntity, Column, Entity, ManyToOne, OneToMany, PrimaryGeneratedColumn, Unique } from "typeorm";
 
 @Entity()
-@Unique(['subcategory_name'])
+@Unique(['subCategory_name'])
 export class SubCategory extends BaseEntity {
     @PrimaryGeneratedColumn()
     subCategory_id: number;

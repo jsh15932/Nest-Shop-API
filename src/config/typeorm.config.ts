@@ -7,7 +7,7 @@ export const typeOrmConfig:TypeOrmModuleOptions = {
     username: 'root',
     password: 'pw12345678',
     database: 'sellernest',
-    entities : [__dirname +'/..**/*.entity.ts'],
+    entities: [__dirname + '/../**/*.entity.js'],
     synchronize : true,
     autoLoadEntities: true
 };
