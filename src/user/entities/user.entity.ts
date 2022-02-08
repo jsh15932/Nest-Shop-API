@@ -1,8 +1,8 @@
-import { BaseEntity, Column, Entity, ManyToOne, OneToMany, OrderByCondition, PrimaryColumn, PrimaryGeneratedColumn, Unique } from "typeorm";
-import * as bcrypt from "bcrypt";
 import { Address } from "cluster";
 import { Cart } from "src/cart/entities/cart.entity";
 import { Order } from "src/order/entities/order.entity";
+import { BaseEntity, Column, Entity, ManyToOne, OneToMany, OrderByCondition, PrimaryColumn, PrimaryGeneratedColumn, Unique } from "typeorm";
+import * as bcrypt from "bcrypt";
 
 @Entity('users')
 @Unique(['user_email'])
@@ -40,7 +40,7 @@ export class User extends BaseEntity {
     }
 }
 
-@Entity('user_address')
+@Entity('address')
 export class AddAddress extends BaseEntity {
     @PrimaryGeneratedColumn()
     address_id: number;

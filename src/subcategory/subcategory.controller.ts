@@ -3,7 +3,7 @@ import { AuthGuard } from '@nestjs/passport';
 import { FileInterceptor } from '@nestjs/platform-express';
 import { ApiBearerAuth, ApiConsumes, ApiTags } from '@nestjs/swagger';
 import { diskStorage } from 'multer';
-import { extname } from 'path/posix';
+import { extname } from 'path';
 import { CreateSubCategoryDto } from './dto/create-subcategory.dto';
 import { SubCategory } from './entities/subcategory.entity';
 import { SubCategoryService } from './subcategory.service';
